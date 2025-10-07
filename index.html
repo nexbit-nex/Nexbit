@@ -658,6 +658,9 @@
                             </div>
 
                             <div class="text-center mt-3">
+                                <a href="https://bit.ly/Nexbitwhitepapper" target="_blank" class="btn btn-secondary-custom btn-sm me-2">
+                                    <i class="fas fa-file-alt me-1"></i> Whitepaper
+                                </a>
                                 <button class="btn btn-secondary-custom btn-sm me-2" id="addTokenToWallet">
                                     <i class="fas fa-wallet me-1"></i> Add to Wallet
                                 </button>
@@ -1255,7 +1258,6 @@
             }, 5000);
         }
 
-        // Keep the existing functions for staking, claims, etc. (they remain the same)
         async function claimTokens() {
             if (!userAddress) {
                 showNotification('Please connect your wallet first', 'warning');
@@ -1444,7 +1446,7 @@
             try {
                 await window.ethereum.request({
                     method: 'wallet_watchAsset',
-           q         params: {
+                    params: {
                         type: 'ERC20',
                         options: {
                             address: TOKEN_CONTRACT,
